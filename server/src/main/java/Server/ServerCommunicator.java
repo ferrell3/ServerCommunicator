@@ -48,5 +48,7 @@ public class ServerCommunicator {
         server.start();
 
         System.out.println("Server started");
+
+        // TEST - ServerTest1 branch test.
     }
 }
