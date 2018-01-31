@@ -17,6 +17,11 @@ import static java.net.HttpURLConnection.HTTP_OK;
 
 public class ClientCommunicator {
 
+
+
+    //I AM TESTING A BRANCH. THIS IS THE FIRST TEST.
+
+
     private static ClientCommunicator myInstance = new ClientCommunicator();
 
     public static ClientCommunicator getInstance() { return myInstance; }
