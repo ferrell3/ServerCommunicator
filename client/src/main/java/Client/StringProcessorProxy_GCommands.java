@@ -50,24 +50,24 @@ public class StringProcessorProxy_GCommands implements IStringProcessor {
 //                Request input = new Request(in.nextLine());
                 String input = in.nextLine();
                 if(input.toLowerCase().equals("q")) { break; }
-                GenericCommand command = new GenericCommand("IStringProcessor", type,
-                        new Class<?>[]{ Request.class }, new Object[]{new Request(input)});
+//                GenericCommand command = new GenericCommand("IStringProcessor", type,
+//                        new Class<?>[]{ Request.class }, new Object[]{new Request(input)});
 
 //                GenericCommand move = new GenericCommand("VideoGame", "move",
 //                        new Class<?>[]{ int.class, Request.class },
 //                        new Object[] { 3 , new Location(75, 12) });
 
-                Results result = ClientCommunicator.getInstance().sendGenericCommand(command);
-
-                if (result.isSuccess())
-                {
-                    System.out.println(result.getData());
-                }
-                else
-                {
-                    System.out.println(result.getErrorInfo());
-                }
-                System.out.println();
+//                Results result = ClientCommunicator.getInstance().sendGenericCommand(command);
+//
+//                if (result.isSuccess())
+//                {
+//                    System.out.println(result.getData());
+//                }
+//                else
+//                {
+//                    System.out.println(result.getErrorInfo());
+//                }
+//                System.out.println();
             }
         }
     }
