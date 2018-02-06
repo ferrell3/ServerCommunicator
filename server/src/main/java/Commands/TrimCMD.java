@@ -14,6 +14,6 @@ public class TrimCMD implements ICommand{
 
     @Override
     public Results execute() {
-        return new Results(StringProcessor.getInstance().trim(input));
+        return StringProcessor.getInstance().trim(input);
     }
 }

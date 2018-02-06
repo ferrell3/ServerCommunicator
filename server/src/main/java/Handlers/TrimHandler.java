@@ -33,7 +33,7 @@ public class TrimHandler implements HttpHandler {
                 System.out.println(reqData.getData());
 
                 // TODO: Trim the string
-                Results respData = new Results(StringProcessor.getInstance().trim(reqData));
+                Results respData = StringProcessor.getInstance().trim(reqData);
                 respData.setSuccess(true);
 
                 httpExchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);

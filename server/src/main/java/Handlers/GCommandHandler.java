@@ -39,6 +39,7 @@ public class GCommandHandler implements HttpHandler {
                     result.setSuccess(true);
                 }catch (NumberFormatException e)
                 {
+//                    System.out.println("Caught in Server.GCommandHandler.handle()");
                     result.setErrorInfo("Sorry, that's not a valid number format");
                     result.setSuccess(false);
                 }

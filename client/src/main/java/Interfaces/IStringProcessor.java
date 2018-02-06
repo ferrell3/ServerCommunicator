@@ -9,5 +9,4 @@ public interface IStringProcessor {
     String trim(Request input);
 
     String parseInteger(Request input) throws NumberFormatException;
-
 }

@@ -26,28 +26,14 @@ public class ToLowerCaseHandler implements HttpHandler {
                 // Extract the JSON string from the HTTP request body
                 Reader read = new InputStreamReader(httpExchange.getRequestBody());
 
-
-
                 Request reqData = gson.fromJson(read, Request.class);
                 read.close();
 
                 // Display/log the request JSON data
-                System.out.println(reqData.getData());
-
+//                System.out.println(reqData.getData());
                 // TODO: Convert string to lowercase
-                Results respData = new Results(); //StringProcessor.getInstance().toLowerCase(reqData.getData()));
-
-                respData.setData(StringProcessor.getInstance().toLowerCase(reqData));
-
-
-                String str = StringProcessor.getInstance().toLowerCase(reqData);
-                respData.setData(str);
-
-
+                Results respData = StringProcessor.getInstance().toLowerCase(reqData);
                 respData.setSuccess(true);
-
-
-
 
                 httpExchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
                 // We are not sending a response body, so close the response body

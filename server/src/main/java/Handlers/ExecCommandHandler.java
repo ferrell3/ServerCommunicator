@@ -47,7 +47,6 @@ public class ExecCommandHandler implements HttpHandler{
                 }
 
                 Results result = new Results();
-
                 try {
                     result = command.execute();
                     result.setSuccess(true);
@@ -57,13 +56,9 @@ public class ExecCommandHandler implements HttpHandler{
                     result.setSuccess(false);
                 }
 
-
-
-
                 httpExchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
 
                 String gsonResponse = gson.toJson(result);
-
                 PrintWriter pw = new PrintWriter(httpExchange.getResponseBody());
                 pw.write(gsonResponse);
                 pw.close();

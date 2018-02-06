@@ -1,13 +1,14 @@
 package Interfaces;
 
 import Models.Request;
+import Models.Results;
 
 public interface IStringProcessor {
 
-    String toLowerCase(Request input);
+    Results toLowerCase(Request data);
 
-    String trim(Request input);
+    Results trim(Request input);
 
-    String parseInteger(Request input) throws NumberFormatException;
+    Results parseInteger(Request input) throws NumberFormatException;
 
 }

@@ -17,17 +17,12 @@ import static java.net.HttpURLConnection.HTTP_OK;
 
 public class ClientCommunicator {
 
-
-
-    //I AM TESTING A BRANCH. THIS IS THE FIRST TEST.
-
-
     private static ClientCommunicator myInstance = new ClientCommunicator();
 
     public static ClientCommunicator getInstance() { return myInstance; }
 
-    private String serverHost = "10.24.66.130";
-    private String serverPort = "3000";
+    private String serverHost = "192.168.2.176"; //"10.24.66.130";
+    private String serverPort = "8888";
 
     private ClientCommunicator() {}
 

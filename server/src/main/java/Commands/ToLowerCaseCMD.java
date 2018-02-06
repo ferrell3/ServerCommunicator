@@ -14,6 +14,7 @@ public class ToLowerCaseCMD implements ICommand {
 
     @Override
     public Results execute() {
-        return new Results(StringProcessor.getInstance().toLowerCase(input));
+        return StringProcessor.getInstance().toLowerCase(input);
+//        return new Results(StringProcessor.getInstance().toLowerCase(input));
     }
 }

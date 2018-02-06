@@ -2,6 +2,7 @@ package Server;
 
 import Interfaces.IStringProcessor;
 import Models.Request;
+import Models.Results;
 
 public class StringProcessor implements IStringProcessor{
     private static StringProcessor myInstance = new StringProcessor();
@@ -11,30 +12,31 @@ public class StringProcessor implements IStringProcessor{
     private StringProcessor() {}
 
     @Override
-    public String toLowerCase(Request input) {
+    public Results toLowerCase(Request input) {
         System.out.println("In toLowerCase");
         System.out.println("Input: " + input.getData());
-        return input.getData().toLowerCase();
+        return new Results(input.getData().toLowerCase());
     }
 
     @Override
-    public String trim(Request input) {
+    public Results trim(Request input) {
         System.out.println("In trim");
         System.out.println("Input: " + input.getData());
 
-        return input.getData().trim();
+        return new Results(input.getData().trim());
     }
 
     @Override
-    public String parseInteger(Request input) throws NumberFormatException {
+    public Results parseInteger(Request input) throws NumberFormatException {
         System.out.println("In parseInteger");
         System.out.println("Input: " + input.getData());
 
         int num;
         try {
             num = Integer.parseInt(input.getData());
-            return Integer.toString(num);
+            return new Results(Integer.toString(num));
         } catch (NumberFormatException e){
+//            System.out.println("Caught in Server.StringProcessor.parseInteger()");
             throw e;
         }
     }

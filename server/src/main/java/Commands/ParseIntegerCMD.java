@@ -14,6 +14,6 @@ public class ParseIntegerCMD implements ICommand {
 
     @Override
     public Results execute() {
-        return new Results(StringProcessor.getInstance().parseInteger(input));
+        return StringProcessor.getInstance().parseInteger(input);
     }
 }

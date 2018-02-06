@@ -35,8 +35,8 @@ public class ParseIntegerHandler implements HttpHandler {
                 Results respData = new Results();
                 try
                 {
-                    String data = StringProcessor.getInstance().parseInteger(reqData);
-                    respData.setData(data);
+                    respData = StringProcessor.getInstance().parseInteger(reqData);
+//                    respData.setData(data);
                     respData.setSuccess(true);
                 }catch (NumberFormatException e)
                 {
