@@ -1,6 +1,7 @@
 package Server;
 
 import Interfaces.IStringProcessor;
+import Models.OtherRequest;
 import Models.Request;
 import Models.Results;
 
@@ -13,6 +14,10 @@ public class StringProcessor implements IStringProcessor{
 
     @Override
     public Results toLowerCase(Request input) {
+        if(input instanceof OtherRequest)
+        {
+            System.out.println("OtherRequest!");
+        }
         System.out.println("In toLowerCase");
         System.out.println("Input: " + input.getData());
         return new Results(input.getData().toLowerCase());

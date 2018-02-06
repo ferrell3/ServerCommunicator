@@ -1,7 +1,7 @@
 package Models;
 
 public class Request {
-    private String data;
+    protected String data;
 
     public Request(String data) {
         this.data = data;

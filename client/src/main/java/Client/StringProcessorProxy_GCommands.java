@@ -3,6 +3,7 @@ package Client;
 import Interfaces.IStringProcessor;
 import java.util.Scanner;
 import Models.GenericCommand;
+import Models.OtherRequest;
 import Models.Request;
 import Models.Results;
 
@@ -60,7 +61,7 @@ public class StringProcessorProxy_GCommands implements IStringProcessor {
 //                        new Class<?>[]{ Request.class }, new Object[]{new Request(input)});
 
                 GenericCommand command = new GenericCommand("Interfaces.IStringProcessor", type,
-                        new String[]{ "Models.Request" }, new Request[]{new Request(input)});
+                        new String[]{ "Models.Request" }, new Request[]{new OtherRequest(input)});
 
 //                GenericCommand move = new GenericCommand("VideoGame", "move",
 //                        new Class<?>[]{ int.class, Request.class },
